@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/db', (req, res) => {
-  db.query('SELECT * FROM user', (err, results) => {
+  db.query('SELECT * FROM user_table', (err, results) => {
     if (err) {
       console.error('조회 오류:', err);
       return res.status(500).send('DB 조회 실패');
@@ -20,14 +20,14 @@ app.get('/db', (req, res) => {
 });
 
 app.post('/db', (req, res) => {
-  const { UserID, UserPW, UserName } = req.body;
+  const { User_id, User_pw, User_name } = req.body;
 
-  if (!UserID || !UserPW || !UserName) {
-    return res.status(400).send('UserID, UserPW, UserName 모두 입력해주세요');
+  if (!User_id || !User_pw || !User_name) {
+    return res.status(400).send('User_id, User_pw, User_name를 입력하세요');
   }
 
-  const sql = 'INSERT INTO user (UserID, UserPW, UserName) VALUES (?, ?, ?)';
-  db.query(sql, [UserID, UserPW, UserName], (err, result) => {
+  const sql = 'INSERT INTO user_table (User_id, User_pw, User_name) VALUES (?, ?, ?)';
+  db.query(sql, [User_id, User_pw, User_name], (err, result) => {
     if (err) {
       console.error('저장 오류:', err);
       return res.status(500).json({ msg: '저장 실패' });
