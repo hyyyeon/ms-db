@@ -12,7 +12,7 @@
 'body' -> 'raw' -> json -> (사진참고) 내용 입력 -> send 버튼 클릭
 
 5. localhost:3000/db로 접속 후, user 데이터 확인
-![image](https://github.com/user-attachments/assets/484eef96-84c9-4676-baf7-2a5aba18d7ce)
-
+![image](https://github.com/user-attachments/assets/8b37a9bc-b6b5-42dc-98ab-95b5d5bfc404)
+GET으로 바꿔서 send 버튼 클릭
 
 
