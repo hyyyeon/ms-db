@@ -7,8 +7,11 @@
 
 
 3. POSTMAN 사용하여 POST 요청시 app.post() ID,PW가 저장되도록 설정
+![image](https://github.com/user-attachments/assets/565d47e0-271d-4bcf-a20a-2da71f4dfe2d)
+주소 입력 후 POST로 변경
+'body' -> 'raw' -> json -> (사진참고) 내용 입력 -> send 버튼 클릭
 
+5. localhost:3000/db로 접속 후, user 데이터 확인
 
-4. localhost:3000/db로 접속 후, user 데이터 확인
 
 
